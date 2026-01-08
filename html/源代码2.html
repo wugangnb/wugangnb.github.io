@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/个人.png">
+    <title>源代码展示 - 无畏契约免费下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+        }
+        .header {
+            background-color: #252526;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #ff4655;
+        }
+        .header h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #858585;
+            font-size: 14px;
+        }
+        .code-container {
+            background-color: #1e1e1e;
+            border: 1px solid #3c3c3c;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .code-header {
+            background-color: #2d2d2d;
+            padding: 10px 15px;
+            border-bottom: 1px solid #3c3c3c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .code-header span {
+            color: #cccccc;
+            font-size: 14px;
+        }
+        .copy-btn {
+            background-color: #ff4655;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s;
+        }
+        .copy-btn:hover {
+            background-color: #ff6b7a;
+        }
+        pre {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        code {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>源代码展示</h1>
+        <p>无畏契约免费下载 | 官方正版 - 完整HTML源代码</p>
+    </div>
+    
+    <div class="code-container">
+        <div class="code-header">
+            <span>源代码2.html</span>
+            <button class="copy-btn" onclick="copyCode()">复制代码</button>
+        </div>
+        <pre><code id="codeContent">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;无畏契约免费下载 | 官方正版&lt;/title&gt;
+    &lt;link rel="shortcut icon" href="https://val.qq.com/favicon.ico"&gt;
+    &lt;!--  --&gt;
+    &lt;link rel="stylesheet" href="index.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+     &lt;!-- 导航条 --&gt;
+     &lt;nav&gt;
+        &lt;!-- 图像与标题 --&gt;
+        &lt;div class="title"&gt;
+            &lt;img src="../img/favicon.ico" alt=""&gt;
+            &lt;h1&gt;无畏契约VALORANT&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;!-- 菜单栏 --&gt;
+        &lt;div class="items"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;游戏特色&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;英雄介绍&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;系统要求&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;下载游戏&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+     &lt;/nav&gt;
+
+    &lt;section class="hero"&gt;
+        &lt;video autoplay muted loop&gt;
+            &lt;source src="https://game.gtimg.cn/images/val/act/a20230801download/kv-video-250704.mp4" type="video/mp4"&gt;
+        &lt;/video&gt;
+     
+     &lt;div class="hero-content"&gt;
+            &lt;h1&gt;无畏契约 即刻下载&lt;/h1&gt;
+            &lt;p&gt;加入全球数百万玩家的行列，体验5v5战术射击游戏的巅峰之作。&lt;/p&gt;
+            &lt;p&gt;免费下载，公平竞技，开启你的传奇之路！&lt;/p&gt;
+            &lt;button data-agl-cvt="6" class="download-btn"&gt;
+                &lt;i class="fas fa-download"&gt;&lt;/i&gt; 立即下载游戏
+            &lt;/button&gt;
+     &lt;/div&gt;
+    &lt;/section&gt;
+        &lt;section class="features fade-in appear" id="features"&gt;
+        &lt;h2 class="section-title"&gt;游戏特色&lt;/h2&gt;
+        &lt;div class="features-grid"&gt;
+            &lt;div class="feature-card"&gt;
+                &lt;div class="feature-icon"&gt;
+                    &lt;i class="fas fa-skull"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;h3&gt;独特英雄技能&lt;/h3&gt;
+                &lt;p&gt;每位特工拥有独特的战术能力，巧妙搭配技能与枪法，制定专属战术策略。从控制战场到突破防线，每个角色都有改变战局的能力。&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="feature-card"&gt;
+                &lt;div class="feature-icon"&gt;
+                    &lt;i class="fas fa-bullseye"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;h3&gt;精准射击体验&lt;/h3&gt;
+                &lt;p&gt;128-tick服务器确保毫秒级响应，精准命中判定带来纯粹的射击竞技体验。每一发子弹都至关重要，每一枪都决定胜负。&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="feature-card"&gt;
+                &lt;div class="feature-icon"&gt;
+                    &lt;i class="fas fa-shield-alt"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;h3&gt;公平竞技环境&lt;/h3&gt;
+                &lt;p&gt;先进的防作弊系统保障公平游戏环境，所有玩家均从同一起点开始竞技之旅。技能决定胜负，而非装备或等级。&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    
+
+    &lt;section class="agents fade-in appear" id="agents"&gt;
+        &lt;h2 class="section-title"&gt;选择你的特工&lt;/h2&gt;
+        &lt;div class="agents-grid"&gt;
+            &lt;div class="agent-card"&gt;
+                &lt;img src="../img/img-hl.png" alt="Jett" class="agent-img"&gt;
+                &lt;div class="agent-name"&gt;幻棱&lt;span class="agent-role"&gt;决斗者&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="agent-card"&gt;
+                &lt;img src="../img/img-th.png" alt="Reyna" class="agent-img"&gt;
+                &lt;div class="agent-name"&gt;钛狐&lt;span class="agent-role"&gt;先锋&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="agent-card"&gt;
+                &lt;img src="../img/img-vs.png" alt="Phoenix" class="agent-img"&gt;
+                &lt;div class="agent-name"&gt;维斯&lt;span class="agent-role"&gt;哨位&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="agent-card"&gt;
+                &lt;img src="../img/img/img-md.png" alt="Sova" class="agent-img"&gt;
+                &lt;div class="agent-name"&gt;暮蝶&lt;span class="agent-role"&gt;控场&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    
+
+    &lt;section class="requirements fade-in appear" id="requirements"&gt;
+        &lt;h2 class="section-title"&gt;系统要求&lt;/h2&gt;
+        &lt;div class="req-container"&gt;
+            &lt;div class="req-box"&gt;
+                &lt;h3&gt;最低配置&lt;/h3&gt;
+                &lt;ul class="req-list"&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;操作系统&lt;/span&gt;&lt;span class="req-value"&gt;Windows 10 64位&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;处理器&lt;/span&gt;&lt;span class="req-value"&gt;Intel Core i3-4150&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;内存&lt;/span&gt;&lt;span class="req-value"&gt;4 GB RAM&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;显卡&lt;/span&gt;&lt;span class="req-value"&gt;Intel HD 4000&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;存储空间&lt;/span&gt;&lt;span class="req-value"&gt;20 GB 可用空间&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;DirectX&lt;/span&gt;&lt;span class="req-value"&gt;版本 11&lt;/span&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="req-box"&gt;
+                &lt;h3&gt;推荐配置&lt;/h3&gt;
+                &lt;ul class="req-list"&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;操作系统&lt;/span&gt;&lt;span class="req-value"&gt;Windows 10/11 64位&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;处理器&lt;/span&gt;&lt;span class="req-value"&gt;Intel Core i5-9400F&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;内存&lt;/span&gt;&lt;span class="req-value"&gt;8 GB RAM&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;显卡&lt;/span&gt;&lt;span class="req-value"&gt;NVIDIA GTX 1050 Ti&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;存储空间&lt;/span&gt;&lt;span class="req-value"&gt;20 GB 可用空间&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="req-label"&gt;DirectX&lt;/span&gt;&lt;span class="req-value"&gt;版本 12&lt;/span&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    
+
+    &lt;section class="download-section fade-in appear" id="download"&gt;
+        &lt;h2 class="section-title"&gt;立即下载游戏&lt;/h2&gt;
+        &lt;div class="download-container"&gt;
+            &lt;p style="font-size: 1.3rem; margin-bottom: 30px; max-width: 600px; margin: 0 auto 40px; color: var(--valorant-gray);"&gt;
+                加入全球竞技场，体验无与伦比的战术射击游戏。完全免费下载，即刻开启你的传奇之旅！
+            &lt;/p&gt;
+            
+            &lt;div class="download-steps"&gt;
+                &lt;div class="step"&gt;
+                    &lt;div class="step-number"&gt;1&lt;/div&gt;
+                    &lt;h4&gt;创建账号&lt;/h4&gt;
+                    &lt;p&gt;注册Riot Games账号，加入全球玩家社区&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="step"&gt;
+                    &lt;div class="step-number"&gt;2&lt;/div&gt;
+                    &lt;h4&gt;下载客户端&lt;/h4&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <script>
+        function copyCode() {
+            const codeContent = document.getElementById('codeContent');
+            const text = codeContent.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerText;
+                btn.innerText = '已复制！';
+                btn.style.backgroundColor = '#28a745';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '#ff4655';
+                }, 2000);
+            }).catch(err => {
+                alert('复制失败，请手动复制');
+            });
+        }
+    </script>
+</body>
+</html>

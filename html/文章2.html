@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/个人.png">
+    <title>我的html学习之路：从入门到实践</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        /* 容器样式 */
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* 标题样式 */
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2d3748;
+            font-size: 2.8em;
+            font-weight: 700;
+            line-height: 1.3;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* 副标题样式 */
+        h2 {
+            color: #4a5568;
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            font-weight: 600;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        /* 段落样式 */
+        p {
+            margin-bottom: 25px;
+            text-indent: 2em;
+            font-size: 1.15em;
+            color: #4a5568;
+            letter-spacing: 0.5px;
+            line-height: 1.9;
+        }
+
+        /* 引言样式 */
+        .intro {
+            font-style: italic;
+            color: #666;
+            border-left: 4px solid #667eea;
+            padding: 20px 30px;
+            margin-bottom: 40px;
+            background-color: #f7fafc;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.1);
+            font-size: 1.2em;
+        }
+
+        /* 代码块样式 */
+        code {
+            background-color: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.95em;
+            color: #d63384;
+            border: 1px solid #e2e8f0;
+        }
+
+        pre {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        pre code {
+            background-color: transparent;
+            color: #f8fafc;
+            border: none;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        /* 标签样式 */
+        .tag {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        /* 分隔线样式 */
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+            margin: 50px 0;
+        }
+
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.95em;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #f1f5f9;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px 0;
+            }
+
+            .container {
+                margin: 10px;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1.05em;
+                line-height: 1.8;
+            }
+
+            .intro {
+                padding: 15px 20px;
+                font-size: 1.1em;
+            }
+        }
+
+        /* 段落首行缩进 */
+        p {
+            text-indent: 2em;
+        }
+
+        /* 强调样式 */
+        strong {
+            color: #2c3e50;
+            font-weight: 700;
+            position: relative;
+        }
+
+        strong::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #667eea;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        strong:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* 列表样式 */
+        ul, ol {
+            margin: 30px 0;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #4a5568;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 资源列表样式 */
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .resource-item {
+            background-color: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .resource-item:hover {
+            background-color: #e2e8f0;
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .resource-item h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .resource-item p {
+            font-size: 0.95em;
+            margin-bottom: 0;
+            text-indent: 0;
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 阅读进度条 */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #e2e8f0;
+            z-index: 1000;
+        }
+
+        .progress-bar {
+            height: 3px;
+            background: #007bff;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="container">
+        <h1>我的html学习之路：从入门到实践</h1>
+        
+        <p>作为一名AI专业的大一学生，我最初以为学习重心只会是编程算法、机器学习等核心内容，直到专业课老师强调“AI技术最终要落地应用，而HTML是连接AI模型与用户交互的重要桥梁”，我才正式开启了HTML学习之旅。这段从“对标签一知半解”到“能独立完成简单交互页面”的过程，充满了困惑与突破，也让我收获了诸多实用的学习经验与资源。</p>
+        
+        <p>入门阶段，我的首要任务是搞懂“HTML到底是什么”。起初我误以为HTML和Python、Java一样是编程语言，直到跟着教程敲下第一行代码，才明白它其实是用于构建网页结构的标记语言——核心作用是“定义内容的含义和结构”，而非实现复杂逻辑。我从最基础的文档结构学起，&lt;!DOCTYPE html&gt;、&lt;html&gt;、&lt;head&gt;、&lt;body&gt;这些基础标签，我反复默写了好几遍才记牢。第一次成功用&lt;h1&gt;、&lt;p&gt;、&lt;img&gt;标签做出一个包含标题、文字介绍和图片的简单页面时，浏览器中清晰呈现的效果，让我瞬间感受到了HTML的直观与魅力。</p>
+        
+        <p>但入门的新鲜感很快被学习中的困难冲淡。第一个棘手的问题是标签混淆与语义化理解不足。刚开始我总是把&lt;div&gt;和&lt;span&gt;混用，不清楚什么时候该用语义化标签（如&lt;header&gt;、&lt;nav&gt;、&lt;main&gt;）；面对表单相关标签（&lt;input&gt;、&lt;select&gt;、&lt;textarea&gt;）时，更是对不同type属性的用法一头雾水，比如区分不清radio和checkbox的差异，导致做注册表单练习时，无法实现“单选”和“多选”的正确效果。</p>
+        
+        <p>第二个难题是页面布局混乱。AI专业的学习需要后续实现数据可视化展示，而布局是基础。我最初用表格&lt;table&gt;尝试布局，结果页面死板且难以调整；后来学习div+CSS布局，又遇到了盒子模型理解不透彻、浮动（float）使用后出现的“高度塌陷”问题。记得第一次尝试做一个包含侧边栏和主内容区的页面，无论怎么调整，侧边栏都无法和主内容区平行排列，要么重叠要么错位，对着代码反复修改了一下午都没解决，一度想过放弃。</p>
+        
+        <p>为了突破这些瓶颈，我开始主动调整学习方法。针对标签混淆问题，我整理了一份“常用HTML标签清单”，标注每个标签的语义、用法和适用场景，比如把“语义化标签用于页面结构划分，div用于通用容器，span用于行内文本修饰”这样的核心要点加粗记牢，还通过“边敲代码边标注”的方式强化记忆。对于布局难题，我放弃了盲目试错，转而先系统学习CSS基础（毕竟HTML布局离不开CSS配合），跟着教程拆解经典布局案例，从简单的两栏布局入手，逐步理解盒子模型的padding、margin、border属性，以及flex布局的核心原理。当我用flex布局成功实现之前卡壳的侧边栏+主内容区页面时，那种豁然开朗的感觉至今难忘。</p>
+        
+        <p>随着基础越来越扎实，我开始尝试结合AI专业需求做实践项目。我的第一个实践任务是制作一个“AI模型演示页面”，页面需要包含模型介绍、参数设置表单和结果展示区域。在这个过程中，我不仅熟练运用了之前学的HTML标签，还学会了通过表单标签收集用户输入的模型参数，为后续与Python后端（如Flask）对接打下基础。虽然最终的页面还比较简陋，但它让我真切感受到：HTML不是孤立的知识，而是AI项目落地的“前端载体”——比如未来可以用它展示机器学习模型的预测结果、可视化数据集的分析图表。</p>
+        
+        <p>这段学习之旅中，一些实用的学习资源帮了我很大的忙，在这里也分享给同样需要的同学：一是 W3School在线教程 ，它的HTML教程覆盖了从基础到进阶的所有知识点，还有可实时编辑的代码运行区域，适合边学边练；二是 MDN Web Docs ，作为权威的Web开发文档，它对每个标签的语义、兼容性都有详细说明，遇到标签用法疑问时查它准没错；三是 B站“黑马程序员HTML+CSS入门到精通”课程 ，视频讲解通俗易懂，包含大量实战案例，尤其适合新手理解布局逻辑；四是 VS Code编辑器 ，搭配HTML CSS Support、Auto Rename Tag等插件，能自动补全标签、提示错误，大大提高学习效率。</p>
+        
+        <p>回顾我的HTML学习之路，从最初的“无从下手”到如今能独立完成简单实践项目，我深刻明白：HTML虽然基础，但对AI专业的我们而言，是连接技术与应用的重要工具。学习过程中遇到的困难并不可怕，关键是要找准方法、多练多实践。未来，我还会继续深入学习HTML+CSS+JavaScript，尝试将其与AI项目深度结合，让技术真正落地发光。</p>
+        
+        <hr>
+        
+        <footer>
+            <p>© 2025 阿港个人博客 | 我的html学习之路</p>
+        </footer>
+    </div>
+    
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+</html>

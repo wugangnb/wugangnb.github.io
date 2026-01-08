@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/个人.png">
+    <title>源代码展示 - 魔兽世界</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+        }
+        .header {
+            background-color: #252526;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #00a86b;
+        }
+        .header h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #858585;
+            font-size: 14px;
+        }
+        .code-container {
+            background-color: #1e1e1e;
+            border: 1px solid #3c3c3c;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .code-header {
+            background-color: #2d2d2d;
+            padding: 10px 15px;
+            border-bottom: 1px solid #3c3c3c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .code-header span {
+            color: #cccccc;
+            font-size: 14px;
+        }
+        .copy-btn {
+            background-color: #00a86b;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s;
+        }
+        .copy-btn:hover {
+            background-color: #00c77d;
+        }
+        pre {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        code {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>源代码展示</h1>
+        <p>魔兽世界 - 完整HTML源代码</p>
+    </div>
+    
+    <div class="code-container">
+        <div class="code-header">
+            <span>源代码3.html</span>
+            <button class="copy-btn" onclick="copyCode()">复制代码</button>
+        </div>
+        <pre><code id="codeContent">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;魔兽世界&lt;/title&gt;
+    &lt;!--引入外部样式CSS样式--&gt;
+    &lt;link rel="stylesheet" href="css/index.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!--最外层容器--&gt;
+    &lt;div class="header"&gt;
+        &lt;!--背景图片--&gt;
+        &lt;img src="./img/img/bg.jpg" alt=""&gt;
+        &lt;!--导航条--&gt;
+        &lt;div class="nav"&gt;
+            &lt;!--ul父元素，li子元素，总共7个li，所以需要乘以7--&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;进入官网&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;账号注册&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;充值管理&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;&lt;img src="./img/img/logo.png" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;游戏下载&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;客服中心&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;官方论坛&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;!--按钮--&gt;
+    &lt;div class="understand"&gt;
+        &lt;a href="#"&gt;&lt;img src="./img/img/btns.png" alt=""&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!--活动描述--&gt;
+    &lt;div class="active"&gt;
+        &lt;!--无序列表--&gt;
+         &lt;!--ul&gt;li*4&gt;a&gt;h2--&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="#"&gt;
+                    &lt;!--标题--&gt;
+                    &lt;h2&gt;点卡兑换现已开启&lt;/h2&gt;
+                    &lt;!--照片--&gt;
+                    &lt;img src="img/img/1.jpg" alt=""&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#"&gt;
+                    &lt;h2&gt;点卡兑换现已开启&lt;/h2&gt;
+                    &lt;img src="img/img/2.jpg" alt=""&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#"&gt;
+                    &lt;h2&gt;点卡兑换现已开启&lt;/h2&gt;
+                    &lt;img src="img/img/3.jpg" alt=""&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+             &lt;li&gt;
+                &lt;a href="#"&gt;
+                    &lt;h2&gt;点卡兑换现已开启&lt;/h2&gt;
+                    &lt;img src="img/img/4.jpg" alt=""&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!--详细内容--&gt;
+    &lt;div class="detail"&gt;
+        &lt;!--上半部分--&gt;
+        &lt;div class="top"&gt;
+            &lt;!--左侧部分--&gt;
+            &lt;div class="left"&gt;
+                &lt;span&gt;在线客服&lt;/span&gt;
+                &lt;span&gt;反馈&lt;/span&gt;
+                &lt;span&gt;加入我们&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;!--右侧部分--&gt;
+            &lt;div class="right"&gt;合作品牌：NVIDIA&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!--下半部分--&gt;
+        &lt;div class="bottom"&gt;
+            &lt;!--左侧部分--&gt;
+            &lt;div class="left"&gt;
+                &lt;img src="img/img/3_suspense_logo_blizzard.png" alt=""&gt;
+                &lt;img src="img/img/wangyilogo.png" alt=""&gt;
+            &lt;/div&gt;
+            &lt;!--右侧部分--&gt;
+            &lt;div class="right"&gt;
+                &lt;h3 class="title"&gt;隐私｜法律条例｜API&lt;/h3&gt;
+                &lt;p class="text"&gt;©2018 腾讯技术有限公司版权所有 由上海网之易网络科技发展有限公司运营 著作权侵权 | 新出审[2014]451号文网进字[2014]0116号 | 沪网文号[2017]9633-727号 | 增值电信业务经营许可证编号：沪B2-20080012互联网违法和不良信息举报电话：0571-28090163 沪公网安备31011502022167号 | 上海市网络游戏行业自律公约 | 适龄提示：适合13岁以上使用 家长监护工程&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="divider"&gt;&lt;/div&gt;
+    &lt;div class="end"&gt;
+        &lt;p&gt;积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。&lt;/p&gt;
+        &lt;p&gt;健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <script>
+        function copyCode() {
+            const codeContent = document.getElementById('codeContent');
+            const text = codeContent.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerText;
+                btn.innerText = '已复制！';
+                btn.style.backgroundColor = '#28a745';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '#00a86b';
+                }, 2000);
+            }).catch(err => {
+                alert('复制失败，请手动复制');
+            });
+        }
+    </script>
+</body>
+</html>

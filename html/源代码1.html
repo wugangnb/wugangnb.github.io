@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/个人.png">
+    <title>源代码展示 - 中国非物质文化遗产数字博物馆之川剧</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+        }
+        .header {
+            background-color: #252526;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #007acc;
+        }
+        .header h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #858585;
+            font-size: 14px;
+        }
+        .code-container {
+            background-color: #1e1e1e;
+            border: 1px solid #3c3c3c;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .code-header {
+            background-color: #2d2d2d;
+            padding: 10px 15px;
+            border-bottom: 1px solid #3c3c3c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .code-header span {
+            color: #cccccc;
+            font-size: 14px;
+        }
+        .copy-btn {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s;
+        }
+        .copy-btn:hover {
+            background-color: #005a9e;
+        }
+        pre {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        code {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>源代码展示</h1>
+        <p>中国非物质文化遗产数字博物馆之川剧 - 完整HTML源代码</p>
+    </div>
+    
+    <div class="code-container">
+        <div class="code-header">
+            <span>源代码1.html</span>
+            <button class="copy-btn" onclick="copyCode()">复制代码</button>
+        </div>
+        <pre><code id="codeContent">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="shortcut icon" href="../images/网站图标 (2).ico "&gt;
+    &lt;title&gt;中国非物质文化遗产数字博物馆之川剧&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-s1swLUYcLBqAXHj7nWZcBD03oDfaVT4TaOQEaQGnSa65SsyckDHTlfGcB8+LOLkz" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+            ;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background-color: #8f0404;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 3px solid #e74c3c;
+        }
+        .header h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .nav {
+            background-color: #b90505;
+            padding: 10px 0;
+            place-items: center;
+            position: relative;
+            top: 1px;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            place-items: center;
+            position: relative;
+            top: 10px;
+            left: 300px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: background 0s;
+            place-items: center;
+        }
+        .nav a:hover, .nav a.active {
+            background-color: #e74c3c;
+            border-radius: 4px;
+            place-items: center;
+        }
+        .main {
+            max-width: 1300px;
+            margin: 3px auto;
+            padding: 0 20px;
+            position: relative;
+            top: -300px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 20px;
+            line-height: 30px;
+        }
+        .section h2 {
+            font-size: 20px;
+            color: #e74c3c;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 5px;
+        }
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .section .content-list {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        .footer {
+            background-color: #6d0405;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px ;
+            font-size: 14px;
+        }
+        .video{
+            position: relative;
+            top: 1px;
+            left: 28%;
+        }
+        .tp{
+            position: relative;
+            top: -342px;
+            left: -97%;
+        }
+        body{
+            background-color: rgb(243, 242, 242);
+        }
+        html{
+            scroll-behavior:smooth
+        }
+        .btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            font-size: 20px;
+            background-color: #ffffff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 999;
+            transition: background 0.3s ease;
+        }
+        .opera-card {
+            display: inline-block;
+            width: 22%;
+            margin: 1%;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            vertical-align: top;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .opera-card h4 {
+            color: #8f0404;
+            font-size: 22px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f1c40f;
+            padding-bottom: 5px;
+        }
+        .opera-card p {
+            font-size: 20px;
+            line-height: 30px;
+            color: #333;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body &gt;
+    &lt;div class="header" &gt;
+        &lt;h1 style="font-size: 40px;"&gt;中国非物质文化遗产数字博物馆之川剧&lt;/h1&gt;
+        &lt;p&gt;传承非遗文化 · 连接古今未来&lt;/p &gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"&gt;
+            &lt;div class="carousel-inner"&gt;
+                &lt;div class="carousel-item active" data-bs-interval="1000"&gt;
+                &lt;img src="../images/海报.png" class="d-block w-100" alt="..."&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item" data-bs-interval="2000"&gt;
+                &lt;img src="../images/首页背景1.jpg" class="d-block w-100" alt="..." width="2000px"&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                &lt;img src="../images/首页背景2.jpg" class="d-block w-100" alt="..."&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                &lt;img src="../images/首页背景3.jpg" class="d-block w-100" alt="..."&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                &lt;img src="../images/首页背景4.jpg" class="d-block w-100" alt="..."&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev"&gt;
+                &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next"&gt;
+                &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="nav"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#" class="active"&gt;首页&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;历史渊源&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;艺术特色&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;经典剧目&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;传承保护&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;视频欣赏&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class="main"&gt;
+        &lt;div class="section"&gt;
+            &lt;h2&gt;川剧简介&lt;/h2&gt;
+            &lt;p&gt;川剧是中国传统戏曲剧种之一，流行于四川、重庆及贵州、云南部分地区。川剧由昆腔、高腔、胡琴、弹戏、灯调五种声腔组成，俗称"五腔共和"。川剧以其独特的变脸、吐火、滚灯等绝技而闻名于世，是中国非物质文化遗产的重要组成部分。&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="section"&gt;
+            &lt;h2&gt;艺术特色&lt;/h2&gt;
+            &lt;div class="opera-card"&gt;
+                &lt;h4&gt;变脸&lt;/h4&gt;
+                &lt;p&gt;川剧变脸是川剧表演的特技之一，用于揭示剧中人物的内心及思想感情的变化，即把不可见、不可感的抽象的情绪和心理状态变成可见、可感的具体形象——脸谱。&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="opera-card"&gt;
+                &lt;h4&gt;吐火&lt;/h4&gt;
+                &lt;p&gt;吐火是川剧中表现人物性格和情绪的一种特技，演员口中喷出火焰，场面壮观，给人以强烈的视觉冲击力。&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="opera-card"&gt;
+                &lt;h4&gt;滚灯&lt;/h4&gt;
+                &lt;p&gt;滚灯是川剧丑角表演的绝技，演员头顶点燃的油灯，在舞台上做出各种高难度动作，灯不灭、油不洒。&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="opera-card"&gt;
+                &lt;h4&gt;水袖&lt;/h4&gt;
+                &lt;p&gt;水袖是川剧表演中常用的身段技巧，演员通过袖子的舞动来表达人物的情感和内心世界。&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="section"&gt;
+            &lt;h2&gt;经典剧目&lt;/h2&gt;
+            &lt;ul class="content-list"&gt;
+                &lt;li&gt;《白蛇传》&lt;/li&gt;
+                &lt;li&gt;《玉簪记》&lt;/li&gt;
+                &lt;li&gt;《柳荫记》&lt;/li&gt;
+                &lt;li&gt;《拉郎配》&lt;/li&gt;
+                &lt;li&gt;《御河桥》&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class="section"&gt;
+            &lt;h2&gt;传承保护&lt;/h2&gt;
+            &lt;p&gt;川剧于2006年5月20日被列入第一批国家级非物质文化遗产名录。为了保护和传承这一珍贵的文化遗产，四川省和重庆市都建立了川剧传承基地，培养了大批川剧人才。同时，通过数字化手段，将川剧的经典剧目和表演技艺进行保存和传播。&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="footer"&gt;
+        &lt;p&gt;版权所有 © 2024 中国非物质文化遗产数字博物馆&lt;/p&gt;
+        &lt;p&gt;联系方式：contact@example.com&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <script>
+        function copyCode() {
+            const codeContent = document.getElementById('codeContent');
+            const text = codeContent.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerText;
+                btn.innerText = '已复制！';
+                btn.style.backgroundColor = '#28a745';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '#007acc';
+                }, 2000);
+            }).catch(err => {
+                alert('复制失败，请手动复制');
+            });
+        }
+    </script>
+</body>
+</html>
